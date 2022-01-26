@@ -55,6 +55,20 @@ namespace EmployeeManagementSystem.Test
             employee.BanAccount.Should().Be(bankAccount);
             employee.Salary.Should().Be(salary);
         }
+
+        [Theory]
+        [InlineData("abel@test.test")]
+        public void should_be_able_to_create_email_instance(string email)
+        {
+            // Arrange
+
+            // Act
+            var employee = new EmailAddress(email);
+
+            // Assert
+            employee.Current.Should().Be(email);
+
+        }
     }
 }
 
