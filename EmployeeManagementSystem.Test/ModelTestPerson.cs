@@ -14,14 +14,14 @@ namespace EmployeeManagementSystem.Test
         public void should_be_able_to_create_person_instance(string name, string personalNumber, string phoneNumber, string email)
         {
             // Arrange
-
+            var emailAddress = new EmailAddress(email);
             // Act
-            var person = new Person(name, personalNumber, email, phoneNumber);
+            var person = new Person(name, personalNumber, emailAddress, phoneNumber);
 
             // Assert
             person.Name.Should().Be(name);
             person.PersonalNumber.Should().Be(personalNumber);
-            person.Email.Should().Be(email);
+            person.Email.Current.Should().Be(email);
             person.PhoneNumber.Should().Be(phoneNumber);
         }
 
@@ -41,12 +41,13 @@ namespace EmployeeManagementSystem.Test
             string salary)
         {
             // Arrange
+            var emailAddress = new EmailAddress(email);
 
             // Act
             var employee = new Employee(
                             name,
                             personalNumber,
-                            email,
+                            emailAddress,
                             phoneNumber,
                             bankAccount,
                             salary);

@@ -11,7 +11,7 @@ namespace EmployeeManagementSystem.Models
         public Employee(
             string name,
             string personalNumber,
-            string email,
+            EmailAddress email,
             string phoneNumber,
             string bankAccount,
             string salary) : base(name, personalNumber, email, phoneNumber)
