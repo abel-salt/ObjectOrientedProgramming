@@ -18,7 +18,6 @@ namespace EmployeeManagementSystem.Models
         {
             this.BanAccount = bankAccount;
             this.Salary = salary;
-
         }
     }
 }
