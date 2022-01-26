@@ -1,8 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
-    <ProjectReference Include="..\EmployeeManagementSystem.Test\EmployeeManagementSystem.Test.csproj" />
-  </ItemGroup>
+  
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
